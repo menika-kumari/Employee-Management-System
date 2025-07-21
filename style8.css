@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #e9eff5, #f8fbff);
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
+  background-size: auto;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0a3d62;
+}
+
+.card {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #0984e3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0652dd;
+  transform: translateY(-2px);
+}
+
+.hidden {
+  display: none;
+}
+
+#content {
+  margin-top: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background-color: #44bd32;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeInOut 3s ease forwards;
+}
+
+.popup.error {
+  background-color: #e84118;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}

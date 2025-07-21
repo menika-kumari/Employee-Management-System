@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style8.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <div style="height: 5px; background: linear-gradient(to right, #4e54c8, #8f94fb); border-radius: 10px 10px 0 0;"></div>
+    <h1>Employee Management System</h1>
+    <div id="login-section" class="card">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="dashboard" class="card hidden">
+      <h2>Welcome, <span id="user-role"></span></h2>
+      <div id="admin-controls" class="hidden">
+        <button onclick="loadAdminPanel()">Admin Panel</button>
+      </div>
+      <div id="common-controls">
+        <button onclick="loadAttendance()">Attendance</button>
+        <button onclick="loadSalary()">Salary</button>
+      </div>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="content"></div>
+  </div>
+
+  <script src="script5.js"></script>
+</body>
+</html>
